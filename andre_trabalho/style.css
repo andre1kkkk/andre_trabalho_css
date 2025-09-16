@@ -8,7 +8,7 @@ header {
     background-color: gray;
     padding: 10px;
     height: 10vh;
-
+    
 }
 
 body {
@@ -16,7 +16,7 @@ body {
     ;
 }
 
-.container {
+.flex-container {
 
 
     display: flex;
@@ -26,53 +26,62 @@ body {
     height: 90vh;
 }
 
-.div1 {
-    margin: 3px;
-    height: 400px;
-    width: 400px;
+.flex-itens {
+    margin: 5px;
+    height: 500px;
+    width: 500px;
     background-color: blue;
+    border-radius: 20px;
+    border: solid 5px black;
+    flex-shrink: 1;
+
 
 }
 
-/* 0px a 599px */
-@media screen and (max-width: 599px) {
-    .div1 {
-        background-color: rgb(200, 255, 0);
-        height: 100px;
-        width: 100px;
-    }
-
-    .container {
+@media screen and (max-width: 600px) {
+    .flex-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
-         background-color: black;
+    }
+    .flex-itens{
+height: 50px;
+width: 50px;
+        background-color: blueviolet;
+        
     }
 }
 
-/* 600px a 1972px */
-@media screen and (min-width: 600px) {
-
-    .container {
-        background-color: brown;
-
+@media screen and  (min-width:601px) and (max-width:750px) {
+     .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
     }
-
-    .div1 {
-        background-color: green;
-        height: 200px;
-        width: 200px;
+    .flex-itens{
+height: 100px;
+width: 100px;
+        background-color: rgb(214, 201, 11);
+        
     }
 }
 
-/* 1973px em diante */
-@media screen and (min-width: 1973px) {
-    .container {
-        background-color: purple;
+@media screen and (min-width:751px) and (max-width:1200px) {
+     .flex-itens{
 
+        background-color: rgb(214, 11, 45);
+        height: 160px;
+        width: 160px;
+        
     }
-    .div1 {
-        background-color: blue;
-        height: 400px;
-        width: 400px;
+
+}
+
+@media screen and (min-width:1201px) {
+    .flex-itens {
+        background-color: rgb(0, 0, 0);
+        height: 250px;
+        width: 250px;
     }
 }
